@@ -41,6 +41,30 @@ RT_URL = "https://www.cs.cornell.edu/people/pabo/movie-review-data/rt-polarityda
 
 
 # --------------------------------------------------------------------------- #
+# Caching
+# --------------------------------------------------------------------------- #
+# Parsing 50,000 individual files takes a few seconds, so each corpus is cached
+# as Parquet after the first read. Parquet needs pyarrow or fastparquet, which
+# are not strictly required to use this package, so a missing engine degrades to
+# "no caching" rather than raising.
+def _read_cache(path: Path) -> pd.DataFrame | None:
+    if not path.exists():
+        return None
+    try:
+        return pd.read_parquet(path)
+    except ImportError:
+        log.debug("No Parquet engine available; re-reading %s from source", path.stem)
+        return None
+
+
+def _write_cache(df: pd.DataFrame, path: Path) -> None:
+    try:
+        df.to_parquet(path, index=False)
+    except ImportError:
+        log.debug("No Parquet engine available; skipping cache for %s", path.stem)
+
+
+# --------------------------------------------------------------------------- #
 # Download helpers
 # --------------------------------------------------------------------------- #
 def _download_and_extract(url: str, archive_name: str, marker: Path) -> None:
@@ -134,12 +158,14 @@ def load_imdb(split: str = "train", cache: bool = True) -> pd.DataFrame:
         raise ValueError("split must be 'train' or 'test'")
 
     cache_path = INTERIM_DIR / f"imdb_{split}.parquet"
-    if cache and cache_path.exists():
-        return pd.read_parquet(cache_path)
+    if cache:
+        cached = _read_cache(cache_path)
+        if cached is not None:
+            return cached
 
     df = _read_imdb_split(split)
     if cache:
-        df.to_parquet(cache_path, index=False)
+        _write_cache(df, cache_path)
     return df
 
 
@@ -151,8 +177,10 @@ def load_pang_lee(cache: bool = True) -> pd.DataFrame:
     and predates the Stanford corpus by seven years.
     """
     cache_path = INTERIM_DIR / "pang_lee.parquet"
-    if cache and cache_path.exists():
-        return pd.read_parquet(cache_path)
+    if cache:
+        cached = _read_cache(cache_path)
+        if cached is not None:
+            return cached
 
     import nltk
     from nltk.corpus import movie_reviews
@@ -174,7 +202,7 @@ def load_pang_lee(cache: bool = True) -> pd.DataFrame:
         )
     df = pd.DataFrame(rows).sample(frac=1.0, random_state=SEED).reset_index(drop=True)
     if cache:
-        df.to_parquet(cache_path, index=False)
+        _write_cache(df, cache_path)
     return df
 
 
@@ -187,8 +215,10 @@ def load_rt_polarity(cache: bool = True) -> pd.DataFrame:
     reviews transfers to short, journalistic text.
     """
     cache_path = INTERIM_DIR / "rt_polarity.parquet"
-    if cache and cache_path.exists():
-        return pd.read_parquet(cache_path)
+    if cache:
+        cached = _read_cache(cache_path)
+        if cached is not None:
+            return cached
 
     rows = []
     for fname, label in (("rt-polarity.neg", 0), ("rt-polarity.pos", 1)):
@@ -207,7 +237,7 @@ def load_rt_polarity(cache: bool = True) -> pd.DataFrame:
                     )
     df = pd.DataFrame(rows).sample(frac=1.0, random_state=SEED).reset_index(drop=True)
     if cache:
-        df.to_parquet(cache_path, index=False)
+        _write_cache(df, cache_path)
     return df
 
 

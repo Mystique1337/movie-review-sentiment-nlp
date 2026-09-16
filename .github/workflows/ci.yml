@@ -24,15 +24,17 @@ jobs:
           cache: pip
 
       - name: Install dependencies
-        # The unit tests exercise preprocessing, the model zoo and the
-        # aggregation layer, none of which need PyTorch, so the transformer
-        # dependencies are skipped to keep CI fast.
+        # Installed from requirements.txt with the transformer stack filtered
+        # out: the unit tests never touch PyTorch, and pulling it would add
+        # several minutes per matrix entry. Deriving the list from the file
+        # rather than restating it keeps CI from drifting out of sync.
         run: |
           python -m pip install --upgrade pip
-          pip install numpy pandas scipy scikit-learn nltk joblib matplotlib tabulate pytest
+          grep -viE '^(torch|transformers)' requirements.txt > ci-requirements.txt
+          pip install -r ci-requirements.txt
 
       - name: Fetch NLTK resources
-        run: python -c "import nltk; [nltk.download(p, quiet=True) for p in ['stopwords','wordnet','omw-1.4','punkt','punkt_tab']]"
+        run: python -c "import nltk; [nltk.download(p, quiet=True) for p in ['stopwords','wordnet','omw-1.4','punkt','punkt_tab','movie_reviews']]"
 
       - name: Run tests
         run: python -m pytest tests/ -v
