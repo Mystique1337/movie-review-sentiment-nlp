@@ -1,0 +1,32 @@
+# Corpora are downloaded by scripts/00_download_data.py, never redistributed.
+data/
+
+# Trained weights. The DistilBERT checkpoint alone is ~260 MB.
+models/
+
+# Run logs are local scratch; the committed tables, figures and metrics under
+# results/ are the reproducible record of what the code produced.
+results/logs_*.txt
+results/*.log
+
+# The written report is kept out of version control: it carries personal
+# identifiers on its title page. The numbers it cites are all reproducible from
+# the committed contents of results/.
+report/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp

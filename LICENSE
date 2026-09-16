@@ -1,0 +1,34 @@
+MIT License
+
+Copyright (c) 2026 Emmanuel Chidi Ashinze
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Note on the corpora used by this project. The code downloads, but does not
+redistribute, three third-party datasets, each of which remains under the terms
+set by its own authors:
+
+  * Large Movie Review Dataset (aclImdb), Maas et al. (2011),
+    https://ai.stanford.edu/~amaas/data/sentiment/
+  * Polarity dataset v2.0, Pang & Lee (2004),
+    https://www.cs.cornell.edu/people/pabo/movie-review-data/
+  * Sentence polarity dataset v1.0, Pang & Lee (2005),
+    https://www.cs.cornell.edu/people/pabo/movie-review-data/
