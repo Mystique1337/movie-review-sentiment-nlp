@@ -1,0 +1,33 @@
+{
+  "label": "naive_bayes",
+  "n": 25000,
+  "accuracy": 0.86772,
+  "precision_macro": 0.8688146678988765,
+  "recall_macro": 0.86772,
+  "f1_macro": 0.8676217730257283,
+  "f1_positive": 0.8640157901229492,
+  "f1_negative": 0.8712277559285074,
+  "confusion_matrix": [
+    [
+      11187,
+      1313
+    ],
+    [
+      1994,
+      10506
+    ]
+  ],
+  "roc_auc": 0.9419871744,
+  "average_precision": 0.9382785555905703,
+  "accuracy_ci95": [
+    0.8637980000000001,
+    0.871761
+  ],
+  "best_params": {
+    "clf__alpha": 0.1
+  },
+  "cv_accuracy": 0.8871199999999998,
+  "train_seconds": 25.979722023010254,
+  "predict_seconds": 5.335741281509399,
+  "n_features": 200000
+}

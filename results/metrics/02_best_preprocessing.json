@@ -1,0 +1,9 @@
+{
+  "config": "lemma-only",
+  "features": "unigrams + bigrams",
+  "val_accuracy": 0.8982,
+  "kwargs": {
+    "remove_stopwords": false,
+    "normalisation": "lemma"
+  }
+}

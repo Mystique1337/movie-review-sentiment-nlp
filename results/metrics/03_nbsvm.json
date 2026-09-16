@@ -1,0 +1,33 @@
+{
+  "label": "nbsvm",
+  "n": 25000,
+  "accuracy": 0.90628,
+  "precision_macro": 0.9063936107475907,
+  "recall_macro": 0.90628,
+  "f1_macro": 0.9062734494888753,
+  "f1_positive": 0.9070570034511484,
+  "f1_negative": 0.9054898955266024,
+  "confusion_matrix": [
+    [
+      11224,
+      1276
+    ],
+    [
+      1067,
+      11433
+    ]
+  ],
+  "roc_auc": 0.9667043456,
+  "average_precision": 0.9652018997952243,
+  "accuracy_ci95": [
+    0.90268,
+    0.91044
+  ],
+  "best_params": {
+    "clf__C": 30.0
+  },
+  "cv_accuracy": 0.90184,
+  "train_seconds": 35.69337224960327,
+  "predict_seconds": 5.724974870681763,
+  "n_features": 200000
+}

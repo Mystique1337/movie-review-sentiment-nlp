@@ -1,0 +1,11 @@
+phenomenon,review,predicted,score,confidence,decisive_tokens
+simple positive,An absolute triumph. Beautifully acted and genuinely moving.,positive,0.9347,0.8694,"move, beautifully, genuinely, an absolute"
+simple negative,"Dull, overlong and painfully predictable from the first scene.",negative,0.0016,0.9968,"dull, predictable, overlong, painfully"
+negation,This is not a good film. I would not recommend it to anyone.,negative,0.0037,0.9925,"not recommend, not good, recommend it, this be"
+negated negative,"I expected a disaster, but it is not bad at all.",negative,0.0644,0.8711,"at all, be not, not, bad"
+contrast,"The cinematography is stunning and the score is lovely, but the script is a mess and the ending ruins everything that came before.",negative,0.2589,0.4822,"mess, ruin, script, score"
+contrast reversed,"The script is a mess and the pacing drags, but the lead performance is so extraordinary that the whole thing works.",negative,0.1789,0.6422,"mess, extraordinary, script, be so"
+irony,"Oh wonderful, another two hours of explosions pretending to be a plot. Truly a masterpiece of modern cinema.",positive,0.738,0.476,"oh, masterpiece, to be, plot"
+comparison,"Nowhere near as good as the original, though it is better than the third one.",negative,0.4545,0.091,"the original, good a, a the, nowhere"
+"mixed, mild","It is fine. Some parts work, some do not. You will forget it by the weekend.",positive,0.6289,0.2578,"do not, you will, will, not"
+plot description,A man loses his wife in a car accident and travels across the country to scatter her ashes.,positive,0.6549,0.3099,"travel, his wife, man, car accident"

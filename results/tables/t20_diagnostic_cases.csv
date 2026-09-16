@@ -1,0 +1,11 @@
+phenomenon,predicted,score,confidence,decisive_tokens
+simple positive,positive,0.9347,0.8694,"move, beautifully, genuinely, an absolute"
+simple negative,negative,0.0016,0.9968,"dull, predictable, overlong, painfully"
+negation,negative,0.0037,0.9925,"not recommend, not good, recommend it, this be"
+negated negative,negative,0.0644,0.8711,"at all, be not, not, bad"
+contrast,negative,0.2589,0.4822,"mess, ruin, script, score"
+contrast reversed,negative,0.1789,0.6422,"mess, extraordinary, script, be so"
+irony,positive,0.7380,0.4760,"oh, masterpiece, to be, plot"
+comparison,negative,0.4545,0.0910,"the original, good a, a the, nowhere"
+"mixed, mild",positive,0.6289,0.2578,"do not, you will, will, not"
+plot description,positive,0.6549,0.3099,"travel, his wife, man, car accident"

@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2026-09-16T01:41:12+00:00",
+  "git_revision": "unversioned",
+  "python": "3.13.9",
+  "platform": "Darwin 25.6.0 (arm64)",
+  "processor": "arm",
+  "scikit_learn": "1.7.2",
+  "torch": "2.13.0",
+  "mps_available": true,
+  "device": "mps",
+  "ladder": [
+    500,
+    2500,
+    25000
+  ]
+}

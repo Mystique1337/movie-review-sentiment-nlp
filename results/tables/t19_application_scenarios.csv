@@ -1,0 +1,3 @@
+scenario,film_id,n_reviews,gold_positive_share,gold_sentiment,majority_sentiment,mean_probability_sentiment,trimmed_mean_sentiment,majority_score,mean_probability_score,trimmed_mean_score,trimmed_mean_ci_low,trimmed_mean_ci_high,trimmed_mean_decisive
+Scenario A - a film with broadly consistent reception,tt0112818,30,1.0000,positive,positive,positive,positive,0.9667,0.8765,0.9096,0.8419,0.9474,True
+Scenario B - a film whose audience is genuinely split,tt0340874,30,0.5000,positive,positive,positive,positive,0.6667,0.6101,0.6379,0.4547,0.8010,False

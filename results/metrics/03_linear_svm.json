@@ -1,0 +1,33 @@
+{
+  "label": "linear_svm",
+  "n": 25000,
+  "accuracy": 0.90552,
+  "precision_macro": 0.9055281391119632,
+  "recall_macro": 0.90552,
+  "f1_macro": 0.9055195259347734,
+  "f1_positive": 0.9053078896728672,
+  "f1_negative": 0.9057311621966795,
+  "confusion_matrix": [
+    [
+      11347,
+      1153
+    ],
+    [
+      1209,
+      11291
+    ]
+  ],
+  "roc_auc": 0.9663464447999999,
+  "average_precision": 0.964787662202082,
+  "accuracy_ci95": [
+    0.902,
+    0.909122
+  ],
+  "best_params": {
+    "clf__C": 1.0
+  },
+  "cv_accuracy": 0.9068400000000001,
+  "train_seconds": 24.455888986587524,
+  "predict_seconds": 5.500377178192139,
+  "n_features": 200000
+}

@@ -1,0 +1,118 @@
+{
+  "scenarios": [
+    {
+      "scenario": "Scenario A - a film with broadly consistent reception",
+      "film_id": "tt0112818",
+      "n_reviews": 30,
+      "gold_positive_share": 1.0,
+      "gold_sentiment": "positive",
+      "majority_sentiment": "positive",
+      "mean_probability_sentiment": "positive",
+      "trimmed_mean_sentiment": "positive",
+      "majority_score": 0.9667,
+      "mean_probability_score": 0.8765,
+      "trimmed_mean_score": 0.9096,
+      "trimmed_mean_ci_low": 0.8419,
+      "trimmed_mean_ci_high": 0.9474,
+      "trimmed_mean_decisive": true
+    },
+    {
+      "scenario": "Scenario B - a film whose audience is genuinely split",
+      "film_id": "tt0340874",
+      "n_reviews": 30,
+      "gold_positive_share": 0.5,
+      "gold_sentiment": "positive",
+      "majority_sentiment": "positive",
+      "mean_probability_sentiment": "positive",
+      "trimmed_mean_sentiment": "positive",
+      "majority_score": 0.6667,
+      "mean_probability_score": 0.6101,
+      "trimmed_mean_score": 0.6379,
+      "trimmed_mean_ci_low": 0.4547,
+      "trimmed_mean_ci_high": 0.801,
+      "trimmed_mean_decisive": false
+    }
+  ],
+  "diagnostic_cases": [
+    {
+      "phenomenon": "simple positive",
+      "review": "An absolute triumph. Beautifully acted and genuinely moving.",
+      "predicted": "positive",
+      "score": 0.9347,
+      "confidence": 0.8694,
+      "decisive_tokens": "move, beautifully, genuinely, an absolute"
+    },
+    {
+      "phenomenon": "simple negative",
+      "review": "Dull, overlong and painfully predictable from the first scene.",
+      "predicted": "negative",
+      "score": 0.0016,
+      "confidence": 0.9968,
+      "decisive_tokens": "dull, predictable, overlong, painfully"
+    },
+    {
+      "phenomenon": "negation",
+      "review": "This is not a good film. I would not recommend it to anyone.",
+      "predicted": "negative",
+      "score": 0.0037,
+      "confidence": 0.9925,
+      "decisive_tokens": "not recommend, not good, recommend it, this be"
+    },
+    {
+      "phenomenon": "negated negative",
+      "review": "I expected a disaster, but it is not bad at all.",
+      "predicted": "negative",
+      "score": 0.0644,
+      "confidence": 0.8711,
+      "decisive_tokens": "at all, be not, not, bad"
+    },
+    {
+      "phenomenon": "contrast",
+      "review": "The cinematography is stunning and the score is lovely, but the script is a mess and the ending ruins everything that came before.",
+      "predicted": "negative",
+      "score": 0.2589,
+      "confidence": 0.4822,
+      "decisive_tokens": "mess, ruin, script, score"
+    },
+    {
+      "phenomenon": "contrast reversed",
+      "review": "The script is a mess and the pacing drags, but the lead performance is so extraordinary that the whole thing works.",
+      "predicted": "negative",
+      "score": 0.1789,
+      "confidence": 0.6422,
+      "decisive_tokens": "mess, extraordinary, script, be so"
+    },
+    {
+      "phenomenon": "irony",
+      "review": "Oh wonderful, another two hours of explosions pretending to be a plot. Truly a masterpiece of modern cinema.",
+      "predicted": "positive",
+      "score": 0.738,
+      "confidence": 0.476,
+      "decisive_tokens": "oh, masterpiece, to be, plot"
+    },
+    {
+      "phenomenon": "comparison",
+      "review": "Nowhere near as good as the original, though it is better than the third one.",
+      "predicted": "negative",
+      "score": 0.4545,
+      "confidence": 0.091,
+      "decisive_tokens": "the original, good a, a the, nowhere"
+    },
+    {
+      "phenomenon": "mixed, mild",
+      "review": "It is fine. Some parts work, some do not. You will forget it by the weekend.",
+      "predicted": "positive",
+      "score": 0.6289,
+      "confidence": 0.2578,
+      "decisive_tokens": "do not, you will, will, not"
+    },
+    {
+      "phenomenon": "plot description",
+      "review": "A man loses his wife in a car accident and travels across the country to scatter her ashes.",
+      "predicted": "positive",
+      "score": 0.6549,
+      "confidence": 0.3099,
+      "decisive_tokens": "travel, his wife, man, car accident"
+    }
+  ]
+}

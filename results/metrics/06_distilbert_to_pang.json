@@ -1,0 +1,26 @@
+{
+  "label": "distilbert->Pang & Lee v2.0",
+  "n": 2000,
+  "accuracy": 0.819,
+  "precision_macro": 0.8196764353371735,
+  "recall_macro": 0.819,
+  "f1_macro": 0.8189042003219704,
+  "f1_positive": 0.823069403714565,
+  "f1_negative": 0.8147389969293757,
+  "confusion_matrix": [
+    [
+      796,
+      204
+    ],
+    [
+      158,
+      842
+    ]
+  ],
+  "roc_auc": 0.9116730000000002,
+  "average_precision": 0.9105967913838295,
+  "accuracy_ci95": [
+    0.8025,
+    0.837
+  ]
+}

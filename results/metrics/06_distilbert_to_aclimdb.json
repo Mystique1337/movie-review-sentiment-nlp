@@ -1,0 +1,26 @@
+{
+  "label": "distilbert->aclImdb test",
+  "n": 25000,
+  "accuracy": 0.90856,
+  "precision_macro": 0.9086428636191418,
+  "recall_macro": 0.90856,
+  "f1_macro": 0.9085553642690585,
+  "f1_positive": 0.9092064500754627,
+  "f1_negative": 0.9079042784626541,
+  "confusion_matrix": [
+    [
+      11268,
+      1232
+    ],
+    [
+      1054,
+      11446
+    ]
+  ],
+  "roc_auc": 0.9700755008,
+  "average_precision": 0.9692317164734621,
+  "accuracy_ci95": [
+    0.90484,
+    0.9122
+  ]
+}

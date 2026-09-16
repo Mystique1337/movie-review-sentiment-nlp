@@ -1,0 +1,33 @@
+{
+  "label": "logistic_regression",
+  "n": 25000,
+  "accuracy": 0.90616,
+  "precision_macro": 0.9061602599425663,
+  "recall_macro": 0.9061600000000001,
+  "f1_macro": 0.9061599849855976,
+  "f1_positive": 0.9061975209916033,
+  "f1_negative": 0.9061224489795918,
+  "confusion_matrix": [
+    [
+      11322,
+      1178
+    ],
+    [
+      1168,
+      11332
+    ]
+  ],
+  "roc_auc": 0.9666708352000001,
+  "average_precision": 0.965055155390024,
+  "accuracy_ci95": [
+    0.902638,
+    0.90984
+  ],
+  "best_params": {
+    "clf__C": 16.0
+  },
+  "cv_accuracy": 0.9061600000000001,
+  "train_seconds": 26.83505892753601,
+  "predict_seconds": 6.0100297927856445,
+  "n_features": 200000
+}

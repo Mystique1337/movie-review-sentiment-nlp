@@ -1,0 +1,28 @@
+{
+  "label": "vader",
+  "n": 25000,
+  "accuracy": 0.69832,
+  "precision_macro": 0.7215293515685215,
+  "recall_macro": 0.69832,
+  "f1_macro": 0.6902058131604987,
+  "f1_positive": 0.7403429043586036,
+  "f1_negative": 0.6400687219623938,
+  "confusion_matrix": [
+    [
+      6706,
+      5794
+    ],
+    [
+      1748,
+      10752
+    ]
+  ],
+  "roc_auc": 0.7827244127999999,
+  "average_precision": 0.7667283116297028,
+  "accuracy_ci95": [
+    0.6933180000000001,
+    0.703681
+  ],
+  "train_seconds": 0.0,
+  "predict_seconds": 18.07723617553711
+}

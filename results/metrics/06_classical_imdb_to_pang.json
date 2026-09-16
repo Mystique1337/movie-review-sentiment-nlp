@@ -1,0 +1,26 @@
+{
+  "label": "imdb->Pang & Lee v2.0",
+  "n": 2000,
+  "accuracy": 0.9,
+  "precision_macro": 0.9000400040004001,
+  "recall_macro": 0.9,
+  "f1_macro": 0.8999974999374984,
+  "f1_positive": 0.8994974874371859,
+  "f1_negative": 0.900497512437811,
+  "confusion_matrix": [
+    [
+      905,
+      95
+    ],
+    [
+      105,
+      895
+    ]
+  ],
+  "roc_auc": 0.963502,
+  "average_precision": 0.9618580508386401,
+  "accuracy_ci95": [
+    0.886,
+    0.913
+  ]
+}

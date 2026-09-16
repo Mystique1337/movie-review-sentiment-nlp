@@ -1,0 +1,57 @@
+{
+  "label": "distilbert_25000",
+  "n": 25000,
+  "accuracy": 0.90856,
+  "precision_macro": 0.9086428636191418,
+  "recall_macro": 0.90856,
+  "f1_macro": 0.9085553642690585,
+  "f1_positive": 0.9092064500754627,
+  "f1_negative": 0.9079042784626541,
+  "confusion_matrix": [
+    [
+      11268,
+      1232
+    ],
+    [
+      1054,
+      11446
+    ]
+  ],
+  "roc_auc": 0.9700755008,
+  "average_precision": 0.9692317164734621,
+  "accuracy_ci95": [
+    0.90484,
+    0.9122
+  ],
+  "train_size": 25000,
+  "train_seconds": 1995.806641817093,
+  "predict_seconds": 277.3933880329132,
+  "history": {
+    "loss": [
+      0.3300189759850502,
+      0.17816530586481094
+    ],
+    "val_accuracy": [
+      0.905,
+      0.907
+    ],
+    "epoch_seconds": [
+      944.6517312526703,
+      914.2169680595398
+    ],
+    "total_seconds": 1991.8853912353516,
+    "device": "mps",
+    "config": {
+      "max_length": 256,
+      "batch_size": 32,
+      "eval_batch_size": 64,
+      "learning_rate": 2e-05,
+      "weight_decay": 0.01,
+      "epochs": 2,
+      "warmup_ratio": 0.1,
+      "max_grad_norm": 1.0,
+      "seed": 42
+    }
+  },
+  "n_parameters": 66955010
+}

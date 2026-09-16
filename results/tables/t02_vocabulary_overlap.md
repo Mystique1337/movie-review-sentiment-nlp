@@ -1,0 +1,7 @@
+**Lexical overlap between corpora (Jaccard index of the 5,000 most frequent types)**
+
+| pair                          |   jaccard_top5k |
+|:------------------------------|----------------:|
+| aclImdb train vs aclImdb test |          0.6496 |
+| aclImdb train vs Pang & Lee   |          0.6461 |
+| aclImdb train vs RT sentences |          0.3609 |

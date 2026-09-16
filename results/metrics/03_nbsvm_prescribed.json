@@ -1,0 +1,24 @@
+{
+  "label": "nbsvm_prescribed",
+  "n": 25000,
+  "accuracy": 0.8946,
+  "precision_macro": 0.8946394639463946,
+  "recall_macro": 0.8946,
+  "f1_macro": 0.8945973649341235,
+  "f1_positive": 0.8951243781094528,
+  "f1_negative": 0.894070351758794,
+  "confusion_matrix": [
+    [
+      11120,
+      1380
+    ],
+    [
+      1255,
+      11245
+    ]
+  ],
+  "accuracy_ci95": [
+    0.89092,
+    0.89856
+  ]
+}

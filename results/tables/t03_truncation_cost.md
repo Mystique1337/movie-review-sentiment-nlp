@@ -1,0 +1,8 @@
+**Share of documents affected by transformer input truncation**
+
+| corpus               |   share_over_256_words_% |   share_over_512_words_% |
+|:---------------------|-------------------------:|-------------------------:|
+| Pang & Lee v2.0      |                  98.0000 |                  76.6500 |
+| aclImdb train        |                  29.1680 |                   7.6120 |
+| aclImdb test         |                  27.9880 |                   7.1640 |
+| RT sentence polarity |                   0.0000 |                   0.0000 |
