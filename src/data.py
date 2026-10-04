@@ -150,9 +150,10 @@ def load_imdb(split: str = "train", cache: bool = True) -> pd.DataFrame:
     """Load the Stanford Large Movie Review Dataset (Maas et al., 2011).
 
     50,000 polarised reviews, split 25k/25k by the dataset authors into train
-    and test. Reviews with 5 or 6 stars were excluded by the authors, and no
-    more than 30 reviews per film are included, which limits the risk that a
-    model simply memorises film-specific vocabulary.
+    and test. Reviews with 5 or 6 stars were excluded by the authors, no more
+    than 30 reviews per film are included, and the training and test sets
+    contain different films (Maas et al., 2011, p. 149), which limits the risk
+    that a model scores well by memorising film-specific vocabulary.
     """
     if split not in {"train", "test"}:
         raise ValueError("split must be 'train' or 'test'")

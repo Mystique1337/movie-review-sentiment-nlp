@@ -1,7 +1,8 @@
 """Deep-learning arm: fine-tuning DistilBERT for binary sentiment.
 
-DistilBERT (Sanh et al., 2019) is a 66M-parameter distillation of BERT-base that
-retains roughly 97% of its language-understanding ability at 40% of the size.
+DistilBERT (Sanh et al., 2019, pp. 1, 3) is a 66M-parameter distillation of
+BERT-base that is 40% smaller while retaining roughly 97% of its
+language-understanding ability.
 That trade-off is what makes this arm feasible on the hardware available for the
 project (an Apple M4 laptop with 16 GB of unified memory) rather than on a
 rented GPU, which is itself a finding worth reporting.

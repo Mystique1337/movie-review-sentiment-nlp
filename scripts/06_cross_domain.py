@@ -3,9 +3,9 @@
 
 Accuracy on a held-out split of the *same* corpus overstates what a deployed
 system would achieve, because train and test share vocabulary, era, review
-length and annotation conventions. Paramesha et al. (2023) make exactly this
-point for cross-domain sentiment analysis, and step 1 already showed the warning
-sign: aclImdb and the Rotten Tomatoes snippets share only about a third of their
+length and annotation conventions. Blitzer et al. (2007, pp. 440, 442) measure
+exactly this loss for sentiment classifiers moved between review domains, and
+step 1 already showed the warning sign: aclImdb and the Rotten Tomatoes snippets share only about a third of their
 frequent vocabulary.
 
 This script therefore transfers models across corpora in both directions and
