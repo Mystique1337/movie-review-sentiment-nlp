@@ -221,12 +221,13 @@ Two of them encode findings rather than behaviour. `test_naive_stopwords_destroy
 
 Key works behind the design decisions. Full bibliographic detail, verified against Crossref and arXiv, is in `report/references.bib`.
 
+- Blitzer, J., Dredze, M., & Pereira, F. (2007). Biographies, Bollywood, boom-boxes and blenders: Domain adaptation for sentiment classification. *ACL 2007*, 440–447.
+- Dietterich, T. G. (1998). Approximate statistical tests for comparing supervised classification learning algorithms. *Neural Computation, 10*(7), 1895–1923.
 - Maas, A. L., Daly, R. E., Pham, P. T., Huang, D., Ng, A. Y., & Potts, C. (2011). Learning word vectors for sentiment analysis. *ACL-HLT 2011*, 142–150.
 - Pang, B., Lee, L., & Vaithyanathan, S. (2002). Thumbs up? Sentiment classification using machine learning techniques. *EMNLP 2002*, 79–86.
-- Wang, S., & Manning, C. D. (2012). Baselines and bigrams: Simple, good sentiment and topic classification. *ACL 2012*, 90–94.
-- Sanh, V., Debut, L., Chaumond, J., & Wolf, T. (2019). DistilBERT, a distilled version of BERT. arXiv:1910.01108.
-- Dietterich, T. G. (1998). Approximate statistical tests for comparing supervised classification learning algorithms. *Neural Computation, 10*(7), 1895–1923.
 - Paramesha, K., Gururaj, H. L., Nayyar, A., & Ravishankar, K. C. (2023). Sentiment analysis on cross-domain textual data using classical and deep learning approaches. *Multimedia Tools and Applications, 82*(20), 30759–30782.
+- Sanh, V., Debut, L., Chaumond, J., & Wolf, T. (2019). DistilBERT, a distilled version of BERT: Smaller, faster, cheaper and lighter (arXiv:1910.01108). arXiv. https://doi.org/10.48550/arXiv.1910.01108
+- Wang, S., & Manning, C. D. (2012). Baselines and bigrams: Simple, good sentiment and topic classification. *ACL 2012*, 90–94.
 
 ---
 
