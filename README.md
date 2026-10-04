@@ -19,7 +19,7 @@ The project is built around a question that a single accuracy number cannot answ
 | Multinomial Naive Bayes | 0.8677 | 26 s (CPU) |
 | VADER lexicon (no training) | 0.6983 | 0 s |
 
-Scored once on the official 25,000-document test split, which no model saw during training or tuning.
+Scored once on the official 25,000-document test split, which no model saw during training or tuning. NB-SVM was deployed as the highest test-split scorer; it is statistically indistinguishable from logistic regression and the linear SVM (exact McNemar p ≥ 0.64), and cross-validation alone would have picked the linear SVM.
 
 Pooling reviews per film lifts a 90.6% document classifier to a **96.7%** film-level verdict across 1,611 films.
 
@@ -53,7 +53,7 @@ Both models were trained on IMDb and applied unchanged to two other corpora:
 | Pang & Lee reviews | 697 words | **0.9000** | 0.8190 |
 | RT critic sentences | 20 words | 0.7375 | **0.8155** |
 
-DistilBERT is 7.8 points better on short sentences and 8.1 points worse on long reviews. The mechanism is its fixed 256-subword window: 98% of Pang & Lee reviews exceed it, so the transformer decides from roughly the first quarter of each document while the bag-of-words model reads all of it. On RT sentences nothing is truncated at all, and the pretrained representation wins comfortably.
+DistilBERT is 7.8 points better on short sentences and 8.1 points worse on long reviews. The mechanism is its fixed 256-subword window: at least 98% of Pang & Lee reviews exceed it, so the transformer decides from under a third of each document while the bag-of-words model reads all of it. On RT sentences nothing is truncated at all, and the pretrained representation wins.
 
 The practical reading is that neither architecture is simply better. Choosing between them means knowing how long the target documents are, and in-domain accuracy on IMDb would have told you nothing about either result.
 
@@ -68,10 +68,10 @@ raw review text
   normalisation        HTML stripping, lowercasing, lemmatisation
       |                (function words deliberately retained)
       v
-  vectorisation        TF-IDF over unigrams + bigrams
-      |
+  vectorisation        binary unigrams + bigrams, weighted by
+      |                the Naive Bayes log-count ratio
       v
-  classification       NB-SVM  ->  P(positive) per review
+  classification       logistic regression (NB-SVM)  ->  P(positive) per review
       |
       v
   aggregation          majority vote over a film's reviews
@@ -157,7 +157,7 @@ make classical-only   # skips step 5, roughly 25 min, no GPU needed
 | 7 | `07_error_analysis.py` | Errors by star rating, length and construction; calibration; film aggregation |
 | 8 | `08_demo_film_verdict.py` | The finished system on three application scenarios |
 
-Every experiment is seeded (`src/config.SEED = 42`). Hyper-parameters are selected by cross-validation inside the training split only; the test split is scored once per model.
+Every experiment is seeded (`src/config.SEED = 42`). Hyper-parameters are selected by cross-validation inside the training split only; the test split is scored once per model. The deployed model was then chosen among the tuned models by test accuracy, which the report discusses.
 
 ---
 
